@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>RealityCheck AR Book Demo</title>
+    
+    <script>
+
+		window.onload=function(){
+		if(document.getElementById('test')!=null||document.getElementById('test')!=""){ 
+		document.getElementById('test').click();
+		}
+		}
+
+      /* from Apple's AR Quick Look Gallery */
+     (function () {
+       var isRelAR = false;
+       var a = document.createElement('a');
+       if (a.relList.supports('ar')) {
+         isRelAR = true;
+       }
+       document.documentElement.classList.add(isRelAR ? 'relar' : 'no-relar');
+     })();
+    </script>
+    <style>
+     .relar [data-hide-on-relar] {
+       display: none;
+     }
+    </style>
+  </head>
+
+  <body>
+    <h1>WebAR using apple quick look (USDZ)</h1>
+    <h2> </h2>
+    <p data-hide-on-relar>ERROR: VISIT THIS PAGE ON iOS13 to view the models in AR</p>
+    
+       <p> Face tracking (.reality format)</p>
+    <a id="test" href="https://github.com/eman-insilico/AR-Quick-Look-examples/raw/master/Face%20tracking%20example.reality#callToAction=Browse%20API&checkoutTitle=Kids%20Slide&checkoutSubtitle=Playground%20in%20your%20backyard&price=£20" rel="ar" >
+      <img src="https://github.com/eman-insilico/AR-Quick-Look-examples/raw/master/Face%20tracking%20icon.JPG" width="250" height="250">
+    </a>
+    
+  </body>
+</html>
