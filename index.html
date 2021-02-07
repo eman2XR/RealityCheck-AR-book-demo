@@ -6,31 +6,30 @@
 	  <script>
 	  window.onload=function()
 	  {
-		if(document.getElementById('test')!=null||document.getElementById('test')!="")
+		if(document.getElementById('ar-link')!=null||document.getElementById('ar-link')!="")
 		{ 
-		document.getElementById('test').click();
+		document.getElementById('ar-link').click();
 		}
 	  }
 	  </script>
 	  
 	  
-	   <script>
-	 const linkElement = document.getElementById("test");
-linkElement.addEventListener("message", function (event) {  window.location.href = 'https://realitycheckxr.com/'; }, false);
-          </script>
+	 <script type="application/javascript">
+		const linkElement = document.getElementById("ar-link");
+	linkElement.addEventListener("message", function (event) {   
+	    if (event.data == "_apple_ar_quicklook_button_tapped") {
+		// handle the user tap. 
+		 window.alert("redirecting you");
+		window.location.href = 'https://realitycheckxr.com/';
+	    }
+	}, false);
+	</script>
 	  
     <script>
       /* from Apple's AR Quick Look Gallery */
      (function () {
        var isRelAR = false;
        var a = document.createElement('a');
-	     
-	     a.addEventListener("message", myFunction3);
-		   	
-		function myFunction3() {
-    		window.alert("redirecting you");
-		window.location.href = 'https://realitycheckxr.com/';
-		}
 	     
        if (a.relList.supports('ar')) {
          isRelAR = true;
@@ -46,12 +45,12 @@ linkElement.addEventListener("message", function (event) {  window.location.href
   </head>
 
   <body>
-    <h1>RealityCheck</h1>
+    <h1>Reality Check</h1>
     <h2> </h2>
     <p data-hide-on-relar>ERROR: VISIT THIS PAGE ON iOS13 to view the models in AR</p>
     
        <p> RealityCheck (.reality format)</p>
-    <a id="test" href="https://github.com/eman2XR/RealityCheck-AR-book-demo/raw/main/realitycheck_ar.usdz#custom=https://eman2xr.github.io/RealityCheck-AR-book-demo/banner_custom.html&customHeight=small" rel="ar" >
+    <a id="ar-link" href="https://github.com/eman2XR/RealityCheck-AR-book-demo/raw/main/realitycheck_ar.usdz#custom=https://eman2xr.github.io/RealityCheck-AR-book-demo/banner_custom.html&customHeight=small" rel="ar" >
       <img src="https://raw.githubusercontent.com/eman2XR/RealityCheck-AR-book-demo/main/RealityCheckLogo.png" width="250" height="250">
     </a>
     
