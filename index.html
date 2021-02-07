@@ -13,17 +13,6 @@
 	  }
 	  </script>
 	  
-	  
-	 <script type="application/javascript">
-		const linkElement = document.getElementById("ar-link");
-	linkElement.addEventListener('message', function (event) {   
-	    if (event.data == "_apple_ar_quicklook_button_tapped") {
-		// handle the user tap. 
-		window.location.href = "https://realitycheckxr.com/";
-	    }
-	}, false);
-	</script>
-	  
     <script>
       /* from Apple's AR Quick Look Gallery */
      (function () {
@@ -52,5 +41,15 @@
       <img src="https://raw.githubusercontent.com/eman2XR/RealityCheck-AR-book-demo/main/RealityCheckLogo.png" width="250" height="250">
     </a>
     
+	   <script type="application/javascript">
+		const linkElement = document.getElementById("ar-link");
+	linkElement.addEventListener('message', function (event) {   
+	    if (event.data == "_apple_ar_quicklook_button_tapped") {
+		// handle the user tap. 
+		window.location.href = "https://realitycheckxr.com/";
+	    }
+	}, false);
+	</script>
+	  
   </body>
 </html>
