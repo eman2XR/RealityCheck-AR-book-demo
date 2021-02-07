@@ -8,18 +8,18 @@
 	  {
 		if(document.getElementById('ar-link')!=null||document.getElementById('ar-link')!="")
 		{ 
-		document.getElementById('ar-link').click();
+		//document.getElementById('ar-link').click();
 		}
 	  }
 	  </script>
 	  
 	  
 	 <script type="application/javascript">
-		const linkElement = document.getElementById('ar-link');
+		const linkElement = document.getElementById("ar-link");
 	linkElement.addEventListener('message', function (event) {   
-	    if (event.data == '_apple_ar_quicklook_button_tapped') {
+	    if (event.data == "_apple_ar_quicklook_button_tapped") {
 		// handle the user tap. 
-		window.location.href = 'https://realitycheckxr.com/';
+		window.location.href = "https://realitycheckxr.com/";
 	    }
 	}, false);
 	</script>
