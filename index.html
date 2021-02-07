@@ -15,6 +15,14 @@
 	  
 	  
 	   <script>
+		var x = document.getElementById("text");
+		x.addEventListener("message", myFunction3);
+		   	
+		function myFunction3() {
+    		window.alert("redirecting you");
+		window.location.href = 'https://realitycheckxr.com/';
+		}
+		   
           const linkElement = document.getElementById("test");
 linkElement.addEventListener("message", function (event) {  window.location.href = 'https://realitycheckxr.com/'; }, false);
           </script>
