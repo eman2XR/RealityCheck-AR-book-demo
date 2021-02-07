@@ -16,10 +16,9 @@
 	  
 	 <script type="application/javascript">
 		const linkElement = document.getElementById('ar-link');
-	linkElement.addEventListener("message", function (event) {   
-	    if (event.data == "_apple_ar_quicklook_button_tapped") {
+	linkElement.addEventListener('message', function (event) {   
+	    if (event.data == '_apple_ar_quicklook_button_tapped') {
 		// handle the user tap. 
-		 window.alert("redirecting you");
 		window.location.href = 'https://realitycheckxr.com/';
 	    }
 	}, false);
