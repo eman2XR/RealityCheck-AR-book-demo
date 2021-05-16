@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>RealityCheck AR Book Demo</title>
+    
+	  <script>
+	  window.onload=function()
+	  {
+		if(document.getElementById('ar-link')!=null||document.getElementById('ar-link')!="")
+		{ 
+		   var a = document.createElement('a');
+		       if (a.relList.supports('ar')) {
+			 document.getElementById('ar-link').click();
+		       }
+		}
+	  }
+	  </script>
+	  
+    <script>
+      /* from Apple's AR Quick Look Gallery */
+     (function () {
+       var isRelAR = false;
+       var a = document.createElement('a');
+	     
+       if (a.relList.supports('ar')) {
+         isRelAR = true;
+       }
+       document.documentElement.classList.add(isRelAR ? 'relar' : 'no-relar');
+     })();
+    </script>
+    <style>
+     .relar [data-hide-on-relar] {
+       display: none;
+     }
+    </style>
+  </head>
+
+<body style="margin: 0px; background-color: rgb(50, 55, 94); overflow: hidden; color: white;">
+    <h2> </h2>
+    <p data-hide-on-relar style="margin:50px">Scan QR code below with your iOS device (iOS13+)</p>
+    
+    <a id="ar-link" href="https://github.com/eman2XR/RealityCheck-AR-book-demo/raw/main/Assets/RealityCheck_AR_Display.reality#custom=https://eman2xr.github.io/RealityCheck-AR-book-demo/banner_custom.html&customHeight=small" rel="ar" >
+        <img data-hide-on-relar src="Assets/qr-code.jpg" width="300px" height="300px" style="margin:50px">
+    </a>
+    
+	   <script type="application/javascript">
+		const linkElement = document.getElementById("ar-link");
+	linkElement.addEventListener('message', function (event) {   
+	    if (event.data == "_apple_ar_quicklook_button_tapped") {
+		// handle the user tap. 
+		window.location.href = "https://realitycheckxr.com/";
+	    }
+	}, false);
+	</script>
+	  
+  </body>
+</html>
