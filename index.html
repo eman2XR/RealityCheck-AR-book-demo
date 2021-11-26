@@ -11,6 +11,7 @@
 		   var a = document.createElement('a');
 		       if (a.relList.supports('ar')) {
 			 document.getElementById('ar-link').click();
+			 document.getElementById('data-on-ar').style.display = 'block';
 		       }
 		}
 	  }
@@ -30,7 +31,6 @@
          isRelAR = true;
        }
        document.documentElement.classList.add(isRelAR ? 'relar' : 'no-relar');
-       if(relAR) {document.getElementById('data-on-ar').style.display = 'block';}
      })();
     </script>
     <style>
