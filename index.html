@@ -28,9 +28,9 @@
 	     
        if (a.relList.supports('ar')) {
          isRelAR = true;
-	 <!--document.getElementById('data-on-ar').style.display = 'block';-->
        }
        document.documentElement.classList.add(isRelAR ? 'relar' : 'no-relar');
+       if(relAR) {document.getElementById('data-on-ar').style.display = 'block';}
      })();
     </script>
     <style>
