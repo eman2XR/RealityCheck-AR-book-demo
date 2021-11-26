@@ -14,6 +14,10 @@
 		       }
 		}
 	  }
+	function LaunchAR()
+    	{
+      		document.getElementById('ar-link').click();
+    	}
 	  </script>
 	  
     <script>
@@ -23,6 +27,7 @@
        var a = document.createElement('a');
 	     
        if (a.relList.supports('ar')) {
+	 document.getElementById('data-show-on-AR').style.visibility='visible';
          isRelAR = true;
        }
        document.documentElement.classList.add(isRelAR ? 'relar' : 'no-relar');
@@ -37,6 +42,12 @@
 
 <body style="margin: 0px; background-color: rgb(50, 55, 94); overflow: hidden; color: white;">
     <h2> </h2>
+	
+     <div id="data-show-on-AR" style="margin:20px; display: none;">
+      <p>Launching AR...<br>If the experience doesn't load automatically, tap the button below</p>
+      <button onclick="LaunchAR()">Launch AR</button>
+    </div>
+	
     <p data-hide-on-relar style="margin:20px">Scan QR code below with your iOS device (iOS13+)</p>
     
     <a id="ar-link" href="Assets/RealityCheck_AR_Display.reality#custom=https://eman2xr.github.io/RealityCheck-AR-book-demo/Assets/banner_custom.html&customHeight=small" rel="ar" >
