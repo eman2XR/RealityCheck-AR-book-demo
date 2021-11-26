@@ -28,6 +28,7 @@
 	     
        if (a.relList.supports('ar')) {
          isRelAR = true;
+	 document.getElementById('data-on-ar').style.display = 'block';
        }
        document.documentElement.classList.add(isRelAR ? 'relar' : 'no-relar');
      })();
@@ -42,7 +43,7 @@
 <body style="margin: 0px; background-color: rgb(50, 55, 94); overflow: hidden; color: white;">
     <h2> </h2>
 	
-     <div rel="ar" style="margin:20px;">
+     <div div="data-on-ar" style="margin:20px; display: none;">
       <p>Launching AR...<br>If the experience doesn't load automatically, tap the button below</p>
       <button onclick="LaunchAR()">Launch AR</button>
     </div>
